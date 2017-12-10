@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thankful EDIT USER Form</title>
+    <link rel="stylesheet" href="../../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../../static/css/register.css">
+    <script type="text/javascript" src="../../static/js/jquery.js"></script>
+</head>
+<body>
+<script type="text/javascript" src="../../static/js/register.js"></script>
+{% include 'navBar.html' %}
+<form action="/profile/edit/{{ id }}" method="post" enctype="multipart/form-data">
+    <div class="form">
+        <div class="tab-content">
+            <div id="signup">
+                <h1>Edit your Current Profile</h1>
+
+                <form action="/profile/edit/{{ id }}" method="post" enctype="multipart/form-data">
+
+                    <div class="top-row">
+                        <div class="field-wrap">
+                            <label>Full Name<span class="req">*</span></label><br><br>
+                            <input type="text" required autocomplete="off"  name="name" value="{{ user['name'] }}"/>
+                        </div>
+                    </div>
+
+                    <br>
+
+
+                    <div class="field-wrap">
+
+                        <label>Location<span class="req">*</span></label><br><br>
+
+                        <input type="text" required autocomplete="off" name="location" value="{{ user['location'] }}"/>
+                    </div>
+
+                    <div class="field-wrap">
+                        <label>
+                            Gender<span class="req control-label">*</span>
+                        </label>
+                        <select name="gender" class="form-control right" style="width: 50%">
+                            <option value="male" selected="selected">Male</option>
+                            <option value="male">Female</option>
+                        </select>
+                    </div>
+
+                    <div class="field-wrap">
+
+                        <label>Age<span class="req control-label">*</span></label><br><br>
+
+                        <input name="age" class="numberSel" type="number" min="18" max="60" value="{{ user['age'] }}">
+                    </div>
+
+                    <div class="field-wrap">
+                        <label>
+                            Preferred Gender<span class="req control-label">*</span>
+                        </label>
+
+                        <select class="form-control right" name="preferred_gender" style="width: 50%">
+                            <option value="{{user['preferred_gender']}}" selected="selected">Male</option>
+                            <option value="male">Female</option>
+                        </select>
+                    </div>
+
+                    <div class="field-wrap">
+
+                        <label>Preferred Minimum Age<span class="req control-label">*</span></label><br><br>
+
+                        <input name="preferred_min_age" class="numberSel" type="number" min="18" max="60" value="{{ user['preferred_min_age'] }}">
+                    </div>
+
+                    <div class="field-wrap">
+
+                        <label>Preferred Maximum Age<span class="req control-label">*</span></label><br><br>
+
+                        <input name="preferred_max_age" class="numberSel" type="number" min="18" max="60" value="{{ user['preferred_max_age'] }}">
+                    </div>
+                    <div class="field-wrap">
+                                <label for="User_Pic">USER PIC</label>
+                        <br>
+                        <br>
+                                <input type="file" name="User_Pic" id="User_Pic" accept=".jpg" multiple/>
+                    </div>
+                    <br>
+
+                    <button type="submit" class="button button-block">
+                        SUBMIT CHANGES
+                    </button>
+
+                </form>
+
+            </div>
+
+            <div id="login">
+
+            </div>
+
+        </div>
+
+    </div>
+</form>
+
+</body>
+
+</html>

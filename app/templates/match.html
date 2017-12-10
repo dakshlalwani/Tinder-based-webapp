@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+haha<br/>
+{% for user in users %}
+    {{ user['name'] }}
+    <button type="button" onclick="window.location.href='/profile/{{ user['id'] }}'">View Profile</button>
+    <br/><br/>
+{% endfor %}
+</body>
+</html>

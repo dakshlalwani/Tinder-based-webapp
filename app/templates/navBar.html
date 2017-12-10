@@ -1,0 +1,16 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Thankful</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="/user/{{ id }}"><span class="glyphicon glyphicon-search"></span> Disover People</a></li>
+            <li><a href="/Match/{{ id }}"><span class="glyphicon glyphicon-heart-empty"></span> Your Matches</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/login"><span class="glyphicon glyphicon-user"> </span> Your Profile</a></li>
+            <li class="active"><a href="/profile/edit/{{ id }}"><span class="glyphicon glyphicon-edit"></span> Edit Profile</a></li>
+            <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <script type="text/javascript" src="../static/js/jquery.js"></script>
+    <title>{{ user.name }} - Thankful</title>
+    <link rel="stylesheet" href="../static/css/user.css">
+    <script src="../static/js/jquery.js"></script>
+</head>
+<body>
+<style>
+    button{
+        position: absolute;
+        top: 0%;
+        right: 0%;
+    }
+
+</style>
+<script src="../static/js/user.js"></script>
+
+<div id="mainwrap">
+
+    <header>
+        <ul id="menu">
+            <li><a class="profile" href="#profile" title="Profile">Profile</a></li>
+            <li><a class="resume" href="/profile/edit/{{ id }}" title="Resume">Edit My Profile</a></li>
+            <li><a href="/user/{{ id }}">Discover People</a></li>
+            <li><a href="/Match/{{ id }}">Your matches</a></li>
+        </ul>
+    </header>
+    <div style="clear:both"></div>
+    <div id="content">
+        <div id="profile" class="section">
+            <div class="column col3">
+                <table id="bioinfo">
+                    <tbody>
+                    <tr>
+                        <td class="odd">Name</td>
+                        <td class="even">{{ user.name }}</td>
+                    </tr>
+                    <tr>
+                        <td class="odd">Location</td>
+                        <td class="even">{{ user.location }}</td>
+                    </tr>
+                    <tr>
+                        <td class="odd">Gender</td>
+                        <td class="even">{{ user.gender }}</td>
+                    </tr>
+                    <tr>
+                        <td class="odd">Age</td>
+                        <td class="even">{{ user.age }}</td>
+                    </tr>
+                    <tr>
+                        <td class="odd">Preferred Minimum Age</td>
+                        <td class="even">{{ user.preferred_min_age }}</td>
+                    </tr>
+                    <tr>
+                        <td class="odd">Preferred Maximum Age</td>
+                        <td class="even">{{ user.preferred_max_age }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <div class="column col5 pl-50">
+                <img src="../static/images/user_images/{{ user.id }}.jpg"/>
+                <p>{{ user.description }}</p>
+            </div>
+            <br>
+            <br>
+        <div class="button">
+            <button onclick="location.href='http://127.0.0.1:5000/logout'" type="button" class="btn btn-danger">logout</button>
+        </div>
+
+
+        </div>
+                <div id="footer">
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
+

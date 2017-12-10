@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <title>Thankful Registration Form</title>
+    <link rel="stylesheet" href="../static/css/register.css">
+    <script type="text/javascript" src="../static/js/jquery.js"></script>
+</head>
+
+<body>
+<script type="text/javascript" src="../static/js/register.js"></script>
+<form action="/login" method="post">
+    <div class="form">
+
+        <ul class="tab-group">
+            <li class="tab"><a href="/register">Sign Up</a></li>
+            <li class="tab active"><a href="">Log In</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="login">
+                <h1>Welcome Back!</h1>
+
+                <form action="/login" method="post">
+
+                    <div class="field-wrap">
+                        <label>
+                            Email Address<span class="req">*</span>
+                        </label>
+                        <input name="email" type="email" required autocomplete="off"/>
+                    </div>
+
+                    <div class="field-wrap">
+                        <label>
+                            Password<span class="req">*</span>
+                        </label>
+                        <input name="password" type="password" required autocomplete="off"/>
+                    </div>
+
+                    {{ recaptcha }}
+                    <br>
+
+                    <button class="button button-block"/>
+                    Log In</button>
+
+                </form>
+
+            </div>
+
+            <div id="signup">
+
+
+            </div>
+
+        </div>
+
+    </div>
+</form>
+
+</body>
+
+</html>
